@@ -1,0 +1,105 @@
+/* Mobile Menu Fixes */
+@media (max-width: 991px) {
+    .mobile-menu-toggle {
+        display: block !important;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .mobile-menu-toggle:hover {
+        color: var(--blue);
+    }
+
+    .mobile-nav {
+        display: none;
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        height: calc(100vh - var(--header-height));
+        background-color: var(--navy);
+        padding: 20px;
+        z-index: 999;
+        overflow-y: auto;
+    }
+
+    .mobile-nav.active {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    /* Fix header container positioning */
+    .header-container {
+        position: relative;
+        padding: 0 20px;
+    }
+
+    /* Ensure logo is visible */
+    .logo {
+        position: relative;
+        z-index: 1000;
+    }
+}
+
+/* Fix grid layout on mobile */
+@media (max-width: 767px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid [class^="col-"] {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Fix spacing issues */
+    .section {
+        padding: 40px 0;
+    }
+
+    /* Fix button alignment */
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    /* Fix footer layout */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Fix language selector on mobile */
+@media (max-width: 991px) {
+    .language-selector {
+        display: none;
+    }
+
+    .mobile-language-selector {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
