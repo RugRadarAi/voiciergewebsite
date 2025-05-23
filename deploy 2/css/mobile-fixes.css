@@ -1,0 +1,29 @@
+@media (max-width: 767px) {
+    /* Correzione layout recensioni nella pagina prezzi per mobile */
+    .grid .col-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Forza il layout verticale per la griglia */
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Assicura che l'icona burger sia sempre visibile su mobile */
+@media (max-width: 991px) {
+    .mobile-menu-toggle {
+        display: block !important;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+    }
+    
+    .header-container {
+        position: relative;
+    }
+}
